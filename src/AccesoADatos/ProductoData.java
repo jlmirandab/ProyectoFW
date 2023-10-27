@@ -220,7 +220,7 @@ public class ProductoData {
                         
             } else {
                 // No hay suficiente stock
-                JOptionPane.showMessageDialog(null, "No hay Stock");
+                JOptionPane.showMessageDialog(null, "No hay Stock.El stock actual es:"+stockActual);
                 return false;
             }
         } catch (SQLException e) {
