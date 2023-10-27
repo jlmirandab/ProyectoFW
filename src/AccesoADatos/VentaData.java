@@ -46,6 +46,7 @@ public class VentaData {
 
                 if (rs.next()) {
                     venta.setIdVenta(rs.getInt(1));
+                    
                     JOptionPane.showMessageDialog(null, "Venta registrada");
                 }
                 ps.close();

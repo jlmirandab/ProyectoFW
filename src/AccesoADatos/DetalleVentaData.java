@@ -39,7 +39,7 @@ public class DetalleVentaData {
            PreparedStatement ps1 = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
            ps1.setInt(1, detalle.getCantidad());
            ps1.setInt(2, detalle.getVenta().getIdVenta());
-           ps1.setDouble(3, detalle.getPrecioVenta());
+           ps1.setDouble(3, detalle.getPrecioVenta()*detalle.getCantidad());
            ps1.setInt(4, detalle.getProducto().getIdProducto());
            
            ps1.executeUpdate();
@@ -48,6 +48,7 @@ public class DetalleVentaData {
                     
            if (rs.next()) {
                 detalle.setIdDetalleVent(rs.getInt(1));
+                
                 JOptionPane.showMessageDialog(null, "DetalleVenta Registrado");
                 }
                 ps1.close();
