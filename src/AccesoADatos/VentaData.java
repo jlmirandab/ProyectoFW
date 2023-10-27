@@ -55,7 +55,7 @@ public class VentaData {
                 }
 
         }else{
-            JOptionPane.showMessageDialog(null, "No se pudo realizar la venta");
+            
         }
     }
     

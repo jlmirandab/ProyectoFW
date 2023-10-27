@@ -53,7 +53,7 @@ public class DetalleVentaData {
                 ps1.close();
 
                 }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Error al acceder a la tabla detalleVenta");
+                
                 }
 
             }
