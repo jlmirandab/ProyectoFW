@@ -335,8 +335,9 @@ public class VentaView extends javax.swing.JInternalFrame {
                 LocalDate fechaLocal = fechaSeleccionada.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
                 // Crear la venta con los datos obtenidos
+                int cantidadAComprar = (int) jSCantidad.getValue();
                 Venta ventaRealizada = new Venta(venta.getIdVenta(), clienteSeleccionado, fechaLocal);
-                vData.guardarVenta1(ventaRealizada, idProducto, 1);
+                vData.guardarVenta1(ventaRealizada, idProducto, cantidadAComprar);
 
                 // Crear el detalle de la venta
                 DetalleVenta detalle = new DetalleVenta(cantidad, ventaRealizada, precioActual, productoSeleccionado);
